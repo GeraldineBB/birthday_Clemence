@@ -2,17 +2,10 @@
 @use 'vars';
 
 body {
-  font-family: sans-serif;
+  font-family: 'Jua', sans-serif;
 }
 
-/* 
-  // or you can import your own font
-  @font-face {
-    font-family: 'Roboto';
-    src: url('../assets/fonts/Roboto-Regular.ttf');
-  }
+h1 {
+  color: #2e8894; 
+}
 
-  body {
-    font-family: 'Roboto', sans-serif;
-  }
-*/
