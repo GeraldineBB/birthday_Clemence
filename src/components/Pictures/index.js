@@ -8,21 +8,23 @@ import './styles.scss';
 
 // == Composant
 const Pictures = ({AnimalsData}) => (
-  <div className="app">
-    <img src={porc} alt="react logo" />
-    <h1>Composant : Pictures</h1>
+  <div className="container">
 
-    <ul className="animals"> {
+    <ul className="container-animals"> {
 
 
     AnimalsData.map(
 
       (animal) => 
-        <li>
-          {animal.name}
+        <li className="container-box">
+          {/* {animal.name} */}
+
+        <div className="container-item"> 
           <img 
           src= {animal.picture}
           />
+        </div>
+
         </li>
 
 

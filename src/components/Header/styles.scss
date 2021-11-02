@@ -1,0 +1,16 @@
+@use 'src/styles/vars';
+
+.header {
+  max-width: 600px;
+  text-align: center;
+  margin: 2.5rem auto 2rem; 
+
+  &-title{
+    font-size: 3rem; 
+    margin-bottom: 1rem; 
+  }
+
+  &-subtitle{
+    font-size: 2rem; 
+  }
+}
