@@ -16,7 +16,7 @@ const Pictures = ({AnimalsData}) => (
     AnimalsData.map(
 
       (animal) => 
-        <li className="container-box">
+        <li className={`container-box-${animal.color}`}>
           {/* {animal.name} */}
 
         <div className="container-item"> 
