@@ -8,11 +8,7 @@ import './styles.scss';
 // == Composant
 const Pictures = ({ AnimalsData }) => {
 
-  let audio = new Audio('${AnimalsData.audio}');
 
-  const start = () => {
-    audio.play(); 
-  }
 
   return (
     <div className="container">
@@ -23,8 +19,7 @@ const Pictures = ({ AnimalsData }) => {
 
       (animal) => (
         <li
-          onClick={start}
-
+        
           key={animal.name}
 
           className={`container-box-${animal.color}`}
