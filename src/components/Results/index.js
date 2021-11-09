@@ -1,8 +1,13 @@
 // == Import
 import PropTypes from 'prop-types';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import useToggle from 'react-use-toggle';
+
 import useSound from 'use-sound';
+
+import Response from '../Response';
+import Pictures from '../Pictures'; 
 
 import './styles.scss';
 
@@ -12,8 +17,7 @@ const Results = ({ AnimalsData}) => {
   const [song, setSong] = useState('sons/Ane.mp3');
   const [play, {stop}] = useSound(song);
 
-  const [isResponse, setResponse] = useState(false); 
-
+  const [isOn, toggleIsOn] = useToggle(); 
 
   return (
     <div className="container">
@@ -31,7 +35,7 @@ const Results = ({ AnimalsData}) => {
           onClick={() => {
             console.log(animal.audio)
             play()
-            setResponse(true); 
+            toggleIsOn(); 
           }} 
           onMouseLeave={() => stop()}
 
@@ -39,14 +43,14 @@ const Results = ({ AnimalsData}) => {
 
           className={`container-box-${animal.color}`}
         >
-          <div className="container-item">
-            <img
-              src={animal.picture}
-            />
-            <audio
-              src={animal.audio}
-            />
-          </div>
+      <div className="container-item">
+        <img
+          src={animal.picture}
+        />      
+        <audio
+          src={animal.audio}
+        />
+      </div>
 
         </li>
       ),
