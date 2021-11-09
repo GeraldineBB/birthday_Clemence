@@ -43,14 +43,16 @@ const Results = ({ AnimalsData}) => {
 
           className={`container-box-${animal.color}`}
         >
-      <div className="container-item">
-        <img
-          src={animal.picture}
-        />      
-        <audio
-          src={animal.audio}
-        />
-      </div>
+
+        <div className="container-item">
+          <img
+            src={animal.picture}
+          /> 
+          {isOn && <h1>{animal.name}</h1> }     
+          <audio
+            src={animal.audio}
+          />
+        </div>
 
         </li>
       ),
