@@ -7,7 +7,7 @@ import useSound from 'use-sound';
 import './styles.scss';
 
 // == Composant
-const Results = ({ AnimalsData}) => {
+const Response = ({ AnimalsData}) => {
 
   const [song, setSong] = useState('sons/Ane.mp3');
   const [play, {stop}] = useSound(song);
@@ -16,10 +16,7 @@ const Results = ({ AnimalsData}) => {
 
 
   return (
-    <div className="container">
-
-      <ul className="container-animals"> {
-
+   
     AnimalsData.map(
 
       (animal) => (
@@ -53,23 +50,17 @@ const Results = ({ AnimalsData}) => {
 
     )
 
-    }
-
-      </ul>
-
-    </div>
   );
 };
 
-Results.propTypes = {
+Response.propTypes = {
   AnimalsData: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       picture: PropTypes.string.isRequired,
     }),
   ).isRequired,
-  setResponse: PropTypes.func, 
 };
 
 // == Export
-export default Results;
+export default Response;
