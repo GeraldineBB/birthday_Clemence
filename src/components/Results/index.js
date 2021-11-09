@@ -4,29 +4,14 @@ import PropTypes from 'prop-types';
 import React, { useState, useEffect } from 'react';
 import useSound from 'use-sound';
 
-
-
 import './styles.scss';
 
 // == Composant
-const Results = ({ AnimalsData, handleClick }) => {
+const Results = ({ AnimalsData }) => {
 
-  // let audio = new Audio('sons/Ane.mp3');
 
-  const start = (son) => {
-    new Audio(son).play(); 
-  }
 
-  const test = ({AnimalsData}) => {
-
-    AnimalsData.map(
-      (animal) => {
-      console.log(animal); 
-      return <div>animal</div>; 
-    })
-  }
-
-  const [song, setSong] = useState('');
+  const [song, setSong] = useState('sons/Ane.mp3');
   const [play, {stop}] = useSound(song);
 
 
@@ -41,9 +26,9 @@ const Results = ({ AnimalsData, handleClick }) => {
         
         <li
       
-          onMouseDown={()=> setSong(animal.audio)}
+          onMouseEnter={()=> setSong(animal.audio)}
           // onClick={handleClick(animal.audio)}
-          onMouseEnter={() => {
+          onClick={() => {
             console.log(animal.audio)
             play()
           }} 

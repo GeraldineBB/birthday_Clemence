@@ -6,20 +6,16 @@ import porc from '../App/images/Vache.svg';
 import './styles.scss';
 
 // == Composant
-const Pictures = ({ AnimalsData }) => {
+const Pictures = ({ AnimalsData }) => (
+  <div className="container">
 
-
-
-  return (
-    <div className="container">
-
-      <ul className="container-animals"> {
+    <ul className="container-animals"> {
 
     AnimalsData.map(
 
       (animal) => (
         <li
-        
+
           key={animal.name}
 
           className={`container-box-${animal.color}`}
@@ -40,11 +36,10 @@ const Pictures = ({ AnimalsData }) => {
 
     }
 
-      </ul>
+    </ul>
 
-    </div>
-  );
-};
+  </div>
+);
 
 Pictures.propTypes = {
   AnimalsData: PropTypes.arrayOf(

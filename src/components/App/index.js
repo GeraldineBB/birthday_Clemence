@@ -5,34 +5,18 @@ import Results from '../Results';
 
 import './styles.scss';
 import React, { useState, useEffect } from 'react';
-import useSound from 'use-sound';
-
-
 
 import AnimalsData from '../../data/animals';
 
 // == Composant
-const App = () => {
+const App = () => (
+  <div className="app">
+    <Header />
+    {/* <Pictures AnimalsData={AnimalsData}/> */}
+    <Results AnimalsData={AnimalsData} />
 
-  const [play] = useSound(''); 
-
-
-  const handleClick= (son)=> {
-
-    setPlay(son); 
-    play(); 
-
-  };
-
-  return (
-    <div className="app">
-      <Header />
-      {/* <Pictures AnimalsData={AnimalsData}/> */}
-      <Results AnimalsData={AnimalsData} handleClick={handleClick} />
-
-    </div>
-  );
-};
+  </div>
+);
 
 // == Export
 export default App;
