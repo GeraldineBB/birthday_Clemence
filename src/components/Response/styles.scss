@@ -2,8 +2,6 @@
 
 .container{
 
-
-
   &-animals{
     display: flex;
     flex-wrap: wrap;
@@ -23,6 +21,10 @@
     display: flex; 
     flex-direction: column; 
     color: vars.$color-title-blue; 
+
+    h1{
+      font-size: 4rem;
+    }
   }
 
   &-box-orange{
@@ -36,6 +38,11 @@
     display: flex; 
     flex-direction: column; 
     color: vars.$color-title-orange; 
+
+    h1{
+      font-size: 4rem;
+      color: vars.$color-title-orange; 
+    }
   }
 
 
@@ -50,3 +57,4 @@
 .container img{
   width: 15rem;
 }
+

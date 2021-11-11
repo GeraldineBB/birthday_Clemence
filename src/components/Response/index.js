@@ -21,8 +21,9 @@ const Response = ({ animal }) => {
       onMouseEnter={() => setSong(animal.audio)}
       onClick={() => {
         console.log(animal.audio);
-        play();
         toggleIsOn();
+        {!isOn && play()};
+        {isOn && stop()};
       }}
       onMouseLeave={() => stop()}
 

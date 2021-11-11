@@ -50,7 +50,6 @@ Results.propTypes = {
       picture: PropTypes.string.isRequired,
     }),
   ).isRequired,
-  setResponse: PropTypes.func, 
 };
 
 // == Export

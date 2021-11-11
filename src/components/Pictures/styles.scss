@@ -2,8 +2,6 @@
 
 .container{
 
-
-
   &-animals{
     display: flex;
     flex-wrap: wrap;
@@ -38,11 +36,22 @@
     color: vars.$color-title-orange; 
   }
 
-
   &-item{ 
     align-items: center;
     justify-content: center;
     margin: auto; 
+  }
+
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .container-box-blue{
+      width: 88%;
+      margin-right: 0rem; 
+    }
+    
+    .container-box-orange{
+      width: 88%;
+      margin-right: 0rem; 
+    }
 }
 
 }
@@ -50,3 +59,4 @@
 .container img{
   width: 15rem;
 }
+

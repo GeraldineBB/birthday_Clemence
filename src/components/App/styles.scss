@@ -4,8 +4,11 @@
   width: 800px;
   margin: 1em auto;
   text-align: center;
+
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    width: 300px;
+    margin: 1em auto;
+    text-align: center;
+  }
 }
 
-// .app img {
-//   max-width: 150px;
-// }
