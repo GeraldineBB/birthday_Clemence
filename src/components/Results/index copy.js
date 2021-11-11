@@ -29,8 +29,34 @@ const Results = ({ AnimalsData }) => {
 
       (animal) => (
         
-        <Response key={animal.audio} animal={animal}/> 
-        
+        // <Response AnimalsData={AnimalsData}/> 
+        <li
+      
+          onMouseEnter={()=> setSong(animal.audio)}
+          // onClick={handleClick(animal.audio)}
+          onClick={() => {
+            console.log(animal.audio)
+            play()
+            toggleIsOn(); 
+          }} 
+          onMouseLeave={() => stop()}
+
+          key={animal.name}
+
+          className={`container-box-${animal.color}`}
+        >
+
+        <div className="container-item">
+          <img
+            src={animal.picture}
+          /> 
+          {isOn && <h1>{animal.name}</h1> }     
+          <audio
+            src={animal.audio}
+          />
+        </div>
+
+        </li>
       ),
 
     )

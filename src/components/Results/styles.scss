@@ -2,8 +2,6 @@
 
 .container{
 
-
-
   &-animals{
     display: flex;
     flex-wrap: wrap;
@@ -49,4 +47,5 @@
 
 .container img{
   width: 15rem;
+  // display: none; 
 }
