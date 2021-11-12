@@ -1,6 +1,5 @@
 // == Import des composants
 import Header from '../Header';
-import Pictures from '../Pictures';
 import Results from '../Results';
 
 import './styles.scss';
@@ -10,20 +9,16 @@ import AnimalsData from '../../data/animals';
 
 // == Composant
 const App = () => {
+  const [isResponse, setResponse] = useState(false);
 
-  const [isResponse, setResponse] = useState(false); 
+  return (
+    <div className="app">
+      <Header />
 
-  return(
-  <div className="app">
-    <Header />
+      <Results AnimalsData={AnimalsData} setResponse={setResponse} />
 
-    
-    <Results AnimalsData={AnimalsData} setResponse={setResponse}/>
-
-
-
-  </div>
-  ); 
+    </div>
+  );
 };
 
 // == Export

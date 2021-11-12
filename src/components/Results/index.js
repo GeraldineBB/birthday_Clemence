@@ -7,30 +7,27 @@ import useToggle from 'react-use-toggle';
 import useSound from 'use-sound';
 
 import Response from '../Response';
-import Pictures from '../Pictures'; 
 
 import './styles.scss';
 
 // == Composant
 const Results = ({ AnimalsData }) => {
-
   const [song, setSong] = useState('sons/Ane.mp3');
-  const [play, {stop}] = useSound(song);
+  const [play, { stop }] = useSound(song);
 
-  const [isOn, toggleIsOn] = useToggle(); 
+  const [isOn, toggleIsOn] = useToggle();
 
   return (
     <div className="container">
 
       <ul className="container-animals"> {
 
-
     AnimalsData.map(
 
       (animal) => (
-        
-        <Response key={animal.audio} animal={animal}/> 
-        
+
+        <Response key={animal.audio} animal={animal} />
+
       ),
 
     )
